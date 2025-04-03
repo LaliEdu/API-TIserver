@@ -13,13 +13,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-   "type":"module",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/LaliEdu/API-TIserver/issues"
   },
   "homepage": "https://github.com/LaliEdu/API-TIserver#readme",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^6.5.0",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.5.0"
   }
 }
