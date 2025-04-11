@@ -20,7 +20,7 @@
   "homepage": "https://github.com/LaliEdu/API-TIserver#readme",
   "description": "",
   "dependencies": {
-    "@prisma/client": "^6.5.0",
+    "@prisma/client": "^6.6.0",
     "cors": "^2.8.5",
     "express": "^5.1.0"
   },

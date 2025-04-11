@@ -29,7 +29,9 @@ app.get('/users', async (req, res) => {
     if (req.query) { 
         users = await prisma.user.findMany({
             where: {
-                name: req.query.name
+                name: req.query.name,
+                email: req.query.email,
+                age: req.query.age
             }
         })
         return res.status(200).json(users);
@@ -69,6 +71,17 @@ app.put('/users/:id', async (req, res) => {
     })
     res.status(201).json({ messege: 'Usuario atualizado com sucesso!' });
 })
+
+app.delete('/users/:id', async (req, res) => {
+    
+    await prisma.user.delete({
+        where: {
+            id: req.params.id
+        }
+    })
+
+    res.status(200).json({message: "Usuário deletado com sucesso"});
+});
 
 //ip 127.0.0.1:8080
 app.listen(8080);
